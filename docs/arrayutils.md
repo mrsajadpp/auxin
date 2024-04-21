@@ -264,3 +264,11 @@ const arr = [1, 2, 3, 4, 5];
 const filteredArr = arrayUtils.filterArray(arr, num => num % 2 === 0);
 console.log(filteredArr); // Output: [2, 4]
 ```
+
+<div align="center">
+
+---
+
+Made with ❤️ by Sajad Collaborated with Grovix Lab
+
+</div>

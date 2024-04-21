@@ -19,3 +19,11 @@ Welcome to the documentation for the Auxin Utility Toolkit npm package! This pac
 ## Date Utility Functions
 
 [Click here](./dateutils.md) to view the documentation for the date utility functions.
+
+<div align="center">
+
+---
+
+Made with ❤️ by Sajad Collaborated with Grovix Lab
+
+</div>

@@ -205,3 +205,11 @@ const subStr = 'hello';
 const occurrences = countOccurrences(str, subStr);
 console.log(occurrences); // Output: 2
 ```
+
+<div align="center">
+
+---
+
+Made with ❤️ by Sajad Collaborated with Grovix Lab
+
+</div>
