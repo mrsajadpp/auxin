@@ -92,3 +92,175 @@ const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
 const sortedArr = quickSort(arr);
 console.log(sortedArr); // Output: [1, 1, 2, 3, 4, 5, 5, 6, 9]
 ```
+
+## `arrPush`
+
+Appends an element to the end of an array.
+
+### Parameters
+
+- `arr`: The array to modify.
+- `target`: The element to append to the array.
+
+### Returns
+
+The modified array with the element appended.
+
+### Example
+
+```typescript
+import { arrPush } from 'auxin';
+
+let arr = [1, 2, 3];
+arr = arrPush(arr, 4);
+console.log(arr); // Output: [1, 2, 3, 4]
+```
+
+## `arrUnshift`
+
+Prepends an element to the beginning of an array.
+
+### Parameters
+
+- `arr`: The array to modify.
+- `target`: The element to prepend to the array.
+
+### Returns
+
+The modified array with the element prepended.
+
+### Example
+
+```typescript
+import { arrUnshift } from 'auxin';
+
+let arr = [2, 3, 4];
+arr = arrUnshift(arr, 1);
+console.log(arr); // Output: [1, 2, 3, 4]
+```
+
+## `arrPop`
+
+Removes the last element from an array.
+
+### Parameters
+
+- `arr`: The array to modify.
+
+### Returns
+
+The modified array with the last element removed.
+
+### Example
+
+```typescript
+import { arrPop } from 'auxin';
+
+let arr = [1, 2, 3];
+arr = arrPop(arr);
+console.log(arr); // Output: [1, 2]
+```
+
+## `arrShift`
+
+Removes the first element from an array.
+
+### Parameters
+
+- `arr`: The array to modify.
+
+### Returns
+
+The modified array with the first element removed.
+
+### Example
+
+```typescript
+import { arrShift } from 'auxin';
+
+let arr = [1, 2, 3];
+arr = arrShift(arr);
+console.log(arr); // Output: [2, 3]
+```
+
+## `arrSlice`
+
+Extracts a section of an array and returns a new array.
+
+### Parameters
+
+- `arr`: The array to slice.
+- `start`: The start index.
+- `end`: The end index (exclusive).
+
+### Returns
+
+A new array containing the sliced elements.
+
+### Example
+
+```typescript
+import { arrSlice } from 'auxin';
+
+const arr = [1, 2, 3, 4, 5];
+const slicedArr = arrSlice(arr, 1, 3);
+console.log(slicedArr); // Output: [2, 3]
+```
+
+## `arrToUpperCase`
+
+Converts all string elements of an array to uppercase.
+
+### Parameters
+
+- `arr`: The array to modify.
+
+### Returns
+
+A new array with all string elements converted to uppercase.
+
+### Example
+
+```typescript
+import { arrToUpperCase } from 'auxin';
+
+const arr = ['hello', 'world'];
+const upperCaseArr = arrToUpperCase(arr);
+console.log(upperCaseArr); // Output: ['HELLO', 'WORLD']
+```
+
+## `arrToLowerCase`
+
+Converts all string elements of an array to lowercase.
+
+### Parameters
+
+- `arr`: The array to modify.
+
+### Returns
+
+A new array with all string elements converted to lowercase.
+
+### Example
+
+```typescript
+import { arrToLowerCase } from 'auxin';
+
+const arr = ['HELLO', 'WORLD'];
+const lowerCaseArr = arrToLowerCase(arr);
+console.log(lowerCaseArr); // Output: ['hello', 'world']
+```
+
+## `arrayUtils`
+
+Exports all array utility functions.
+
+### Example
+
+```typescript
+import * as arrayUtils from 'auxin';
+
+const arr = [1, 2, 3, 4, 5];
+const filteredArr = arrayUtils.filterArray(arr, num => num % 2 === 0);
+console.log(filteredArr); // Output: [2, 4]
+```

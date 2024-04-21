@@ -59,5 +59,73 @@ export module arrayUtils {
         return [...quickSort(left), pivot, ...quickSort(right)];
     }
 
+    export function arrPush<T>(arr: T[], target: T): T[] {
+        arr.push(target);
+        return arr;
+    }
+
+    export function arrUnshift<T>(arr: T[], target: T): T[] {
+        arr.unshift(target);
+        return arr;
+    }
+
+    export function arrPop<T>(arr: T[]): T[] {
+        arr.pop();
+        return arr;
+    }
+
+    export function arrShift<T>(arr: T[]): T[] {
+        arr.shift();
+        return arr;
+    }
+
+    export function arrSlice<T>(arr: T[], start: number, end: number): T[] {
+        arr.slice(start, end);
+        return arr;
+    }
+
+    export function arrToUpperCase<T>(arr: T[]): T[] {
+        // Create a new array to store the uppercase elements
+        const upperCaseArray: T[] = [];
+
+        // Iterate through the original array and convert each element to uppercase
+        for (const element of arr) {
+            // Check if the element is a string
+            if (typeof element === 'string') {
+                // If it's a string, convert it to uppercase and push to the new array
+                upperCaseArray.push(element.toUpperCase() as unknown as T);
+            } else {
+                // If it's not a string, push it to the new array as is
+                upperCaseArray.push(element);
+            }
+        }
+
+        // Return the array with all elements converted to uppercase
+        return upperCaseArray;
+    }
+
+
+    export function arrToLowerCase<T>(arr: T[]): T[] {
+        // Create a new array to store the lowercase elements
+        const lowerCaseArray: T[] = [];
+
+        // Iterate through the original array and convert each element to lowercase
+        for (const element of arr) {
+            // Check if the element is a string
+            if (typeof element === 'string') {
+                // If it's a string, convert it to lowercase and push to the new array
+                lowerCaseArray.push(element.toLowerCase() as unknown as T);
+            } else {
+                // If it's not a string, push it to the new array as is
+                lowerCaseArray.push(element);
+            }
+        }
+
+        // Return the array with all elements converted to lowercase
+        return lowerCaseArray;
+    }
+
+
+
     // Add more array utility functions here as needed...
 }

@@ -15,4 +15,11 @@ export declare namespace arrayUtils {
     function mapArray<T, U>(arr: T[], mapper: (element: T) => U): U[];
     function binarySearch<T>(arr: T[], target: T): number;
     function quickSort<T>(arr: T[]): T[];
+    function arrPush<T>(arr: T[], target: T): T[];
+    function arrUnshift<T>(arr: T[], target: T): T[];
+    function arrPop<T>(arr: T[]): T[];
+    function arrShift<T>(arr: T[]): T[];
+    function arrSlice<T>(arr: T[], start: number, end: number): T[];
+    function arrToUpperCase<T>(arr: T[]): T[];
+    function arrToLowerCase<T>(arr: T[]): T[];
 }
