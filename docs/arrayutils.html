@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Utility Functions Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 1.5em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ccc;
+            color: #666;
+        }
+
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        }
+
+        .example {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="array-utility-functions-documentation">Array Utility Functions Documentation</h1>
+        <p>This npm package provides several utility functions for working with arrays in TypeScript. Below are the
+            details
+            of each function along with code examples for usage.</p>
+        <h2 id="-filterarray-"><code>filterArray</code></h2>
+        <p>Filters an array based on a predicate function.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to filter.</li>
+            <li><code>predicate</code>: The predicate function used to filter elements.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array containing only the elements that satisfy the predicate function.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { filterArray } from <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> filteredArr = filterArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);
+                console.log(filteredArr); <span class="hljs-comment">// Output: [2, 4]</span>
+                </code></pre>
+        </div>
+        <h2 id="-maparray-"><code>mapArray</code></h2>
+        <p>Maps each element of an array to a new value using a transformation function.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to map.</li>
+            <li><code>mapper</code>: The transformation function to apply to each element.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array containing the transformed elements.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { mapArray } from <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> squaredArr = mapArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> * <span class="hljs-built_in">num</span>);
+                console.log(squaredArr); <span class="hljs-comment">// Output: [1, 4, 9, 16, 25]</span>
+                </code></pre>
+        </div>
+        <h2 id="-binarysearch-"><code>binarySearch</code></h2>
+        <p>Performs a binary search on a sorted array to find the index of a target element.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The sorted array to search.</li>
+            <li><code>target</code>: The target element to find.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>The index of the target element if found, otherwise -1.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { binarySearch } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> index = binarySearch(arr, <span class="hljs-number">3</span>);
+                <span class="hljs-built_in">console</span>.log(index); <span class="hljs-comment">// Output: 2</span>
+                </code></pre>
+        </div>
+        <h2 id="-quicksort-"><code>quickSort</code></h2>
+        <p>Sorts an array using the Quick Sort algorithm.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to sort.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array containing the sorted elements.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript">import { quickSort } from 'auxin';
+
+                const arr = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>];
+                const sortedArr = quickSort(arr);
+                console.log(sortedArr); <span class="hljs-comment">// Output: [1, 1, 2, 3, 4, 5, 5, 6, 9]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrpush-"><code>arrPush</code></h2>
+        <p>Appends an element to the end of an array.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+            <li><code>target</code>: The element to append to the array.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>The modified array with the element appended.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrPush } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+                arr = arrPush(arr, <span class="hljs-number">4</span>);
+                <span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// Output: [1, 2, 3, 4]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrunshift-"><code>arrUnshift</code></h2>
+        <p>Prepends an element to the beginning of an array.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+            <li><code>target</code>: The element to prepend to the array.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>The modified array with the element prepended.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrUnshift } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+                arr = arrUnshift(arr, <span class="hljs-number">1</span>);
+                <span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// Output: [1, 2, 3, 4]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrpop-"><code>arrPop</code></h2>
+        <p>Removes the last element from an array.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>The modified array with the last element removed.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrPop } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+                arr = arrPop(arr);
+                <span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// Output: [1, 2]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrshift-"><code>arrShift</code></h2>
+        <p>Removes the first element from an array.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>The modified array with the first element removed.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrShift } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+                arr = arrShift(arr);
+                <span class="hljs-built_in">console</span>.log(arr); <span class="hljs-comment">// Output: [2, 3]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrslice-"><code>arrSlice</code></h2>
+        <p>Extracts a section of an array and returns a new array.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to slice.</li>
+            <li><code>start</code>: The start index.</li>
+            <li><code>end</code>: The end index (exclusive).</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array containing the sliced elements.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript">import { arrSlice } from 'auxin';
+
+                const arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                const slicedArr = arrSlice(arr, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
+                console.log(slicedArr); <span class="hljs-comment">// Output: [2, 3]</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrtouppercase-"><code>arrToUpperCase</code></h2>
+        <p>Converts all string elements of an array to uppercase.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array with all string elements converted to uppercase.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrToUpperCase } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'world'</span>];
+                <span class="hljs-keyword">const</span> upperCaseArr = arrToUpperCase(arr);
+                <span class="hljs-built_in">console</span>.log(upperCaseArr); <span class="hljs-comment">// Output: ['HELLO', 'WORLD']</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrtolowercase-"><code>arrToLowerCase</code></h2>
+        <p>Converts all string elements of an array to lowercase.</p>
+        <h3 id="parameters">Parameters</h3>
+        <ul>
+            <li><code>arr</code>: The array to modify.</li>
+        </ul>
+        <h3 id="returns">Returns</h3>
+        <p>A new array with all string elements converted to lowercase.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrToLowerCase } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-string">'HELLO'</span>, <span class="hljs-string">'WORLD'</span>];
+                <span class="hljs-keyword">const</span> lowerCaseArr = arrToLowerCase(arr);
+                <span class="hljs-built_in">console</span>.log(lowerCaseArr); <span class="hljs-comment">// Output: ['hello', 'world']</span>
+                </code></pre>
+        </div>
+        <h2 id="-arrayutils-"><code>arrayUtils</code></h2>
+        <p>Exports all array utility functions.</p>
+        <h3 id="example">Example</h3>
+        <div class="example">
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> arrayUtils from <span class="hljs-string">'auxin'</span>;
+
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> filteredArr = arrayUtils.filterArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);
+                console.log(filteredArr); <span class="hljs-comment">// Output: [2, 4]</span>
+                </code></pre>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Made with ❤️ by Sajad Collaborated with Grovix Lab</p>
+    </div>
+
+</body>
+
+</html>
