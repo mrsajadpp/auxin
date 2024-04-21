@@ -7,7 +7,7 @@
   "directories": {
     "doc": "docs",
     "test": "test"
-  }, 
+  },
   "scripts": {
     "build": "tsc",
     "array": "nodemon test/arrayUtils.test.js",
@@ -21,6 +21,16 @@
   "keywords": [
     "auxin",
     "utility"
+  ],
+  "funding": [
+    {
+      "type": "buymeacoffee",
+      "url": "https://www.buymeacoffee.com/thintry"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/sajadpp"
+    }
   ],
   "author": "Sajad PP <sajad@thintry.com> (https://github.com/mrsajadpp)",
   "license": "MIT",
