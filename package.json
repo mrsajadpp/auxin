@@ -1,13 +1,13 @@
 {
   "name": "auxin",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "description": "Auxin is a powerful Node.js utility toolkit that simplifies common tasks, boosting your development productivity.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
     "doc": "docs",
     "test": "test"
-  },
+  }, 
   "scripts": {
     "build": "tsc",
     "array": "nodemon test/arrayUtils.test.js",
