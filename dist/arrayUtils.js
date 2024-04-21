@@ -60,6 +60,24 @@ var arrayUtils;
         return [...quickSort(left), pivot, ...quickSort(right)];
     }
     arrayUtils.quickSort = quickSort;
+    function quickSortDescending(arr) {
+        if (arr.length <= 1) {
+            return arr;
+        }
+        const pivot = arr[0];
+        const left = [];
+        const right = [];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] >= pivot) { // Modified condition for descending order
+                left.push(arr[i]);
+            }
+            else {
+                right.push(arr[i]);
+            }
+        }
+        return [...quickSortDescending(left), pivot, ...quickSortDescending(right)]; // Recursively sort left and right arrays
+    }
+    arrayUtils.quickSortDescending = quickSortDescending;
     function arrPush(arr, target) {
         arr.push(target);
         return arr;
@@ -123,6 +141,6 @@ var arrayUtils;
         return lowerCaseArray;
     }
     arrayUtils.arrToLowerCase = arrToLowerCase;
-    // Add more array utility functions here as needed...
+    // Add more array utility functions here as needed...
 })(arrayUtils || (exports.arrayUtils = arrayUtils = {}));
 //# sourceMappingURL=arrayUtils.js.map

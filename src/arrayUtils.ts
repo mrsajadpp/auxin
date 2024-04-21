@@ -58,6 +58,27 @@ export module arrayUtils {
 
         return [...quickSort(left), pivot, ...quickSort(right)];
     }
+    
+    export function quickSortDescending<T>(arr: T[]): T[] {
+        if (arr.length <= 1) {
+            return arr;
+        }
+    
+        const pivot = arr[0];
+        const left = [];
+        const right = [];
+    
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] >= pivot) { // Modified condition for descending order
+                left.push(arr[i]);
+            } else {
+                right.push(arr[i]);
+            }
+        }
+    
+        return [...quickSortDescending(left), pivot, ...quickSortDescending(right)]; // Recursively sort left and right arrays
+    }
+    
 
     export function arrPush<T>(arr: T[], target: T): T[] {
         arr.push(target);
@@ -125,7 +146,5 @@ export module arrayUtils {
         return lowerCaseArray;
     }
 
-
-
-    // Add more array utility functions here as needed...
+    // Add more array utility functions here as needed...
 }
