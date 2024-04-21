@@ -1,6 +1,6 @@
 {
   "name": "auxin",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "The Utility Toolkit npm package is a comprehensive collection of utility functions designed to streamline common tasks in Node.js development. Whether you're working on string manipulation, array operations, date/time formatting, or other general-purpose tasks, this toolkit has you covered.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
