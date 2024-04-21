@@ -1,7 +1,7 @@
 {
   "name": "auxin",
   "version": "1.6.0",
-  "description": "The Utility Toolkit npm package is a comprehensive collection of utility functions designed to streamline common tasks in Node.js development. Whether you're working on string manipulation, array operations, date/time formatting, or other general-purpose tasks, this toolkit has you covered.",
+  "description": "Auxin is a powerful Node.js utility toolkit that simplifies common tasks, boosting your development productivity.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "directories": {
