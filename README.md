@@ -1,4 +1,4 @@
-# Utility Toolkit
+# Auxin Utility Toolkit
 
 The Utility Toolkit npm package is a comprehensive collection of utility functions designed to streamline common tasks in Node.js development. Whether you're working on string manipulation, array operations, date/time formatting, or other general-purpose tasks, this toolkit has you covered.
 
