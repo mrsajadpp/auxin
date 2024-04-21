@@ -12,29 +12,6 @@ You can install the Utility Toolkit npm package via npm:
 npm install auxin
 ```
 
-## Usage
-
-To use the Utility Toolkit in your Node.js project, simply import the desired utility functions from the package:
-
-```typescript
-import { arrayUtils, stringUtils, dateUtils } from 'auxin';
-
-// Example usage of arrayUtils
-const arr = [1, 2, 3, 4, 5];
-const filteredArr = arrayUtils.filterArray(arr, num => num % 2 === 0);
-console.log(filteredArr); // Output: [2, 4]
-
-// Example usage of stringUtils
-const str = 'Hello, World!';
-const reversedStr = stringUtils.reverseStr(str);
-console.log(reversedStr); // Output: '!dlroW ,olleH'
-
-// Example usage of dateUtils
-const currentDate = new Date();
-const formattedDate = dateUtils.formatDate(currentDate, 'yyyy-MM-dd');
-console.log(formattedDate); // Output: '2024-04-21'
-```
-
 ## Documentation
 
 For detailed documentation on the available utility functions and their usage, please refer to the [documentation](docs/index.md) included with the package.
