@@ -13,4 +13,6 @@ export declare namespace arrayUtils {
      * @returns A new array containing the transformed elements.
      */
     function mapArray<T, U>(arr: T[], mapper: (element: T) => U): U[];
+    function binarySearch<T>(arr: T[], target: T): number;
+    function quickSort<T>(arr: T[]): T[];
 }

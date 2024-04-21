@@ -24,7 +24,7 @@ console.log(filteredArr); // Output: [2, 4]
 
 // Example usage of stringUtils
 const str = 'Hello, World!';
-const reversedStr = stringUtils.reverseString(str);
+const reversedStr = stringUtils.reverseStr(str);
 console.log(reversedStr); // Output: '!dlroW ,olleH'
 
 // Example usage of dateUtils
