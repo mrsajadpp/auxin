@@ -74,13 +74,87 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+
+        /* CSS for VS Code theme */
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #608b4e;
+            font-style: italic;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-subst {
+            color: #569cd6;
+        }
+
+        .hljs-string,
+        .hljs-title,
+        .hljs-section,
+        .hljs-attribute,
+        .hljs-literal,
+        .hljs-template-tag,
+        .hljs-template-variable,
+        .hljs-type,
+        .hljs-addition {
+            color: #d69d85;
+        }
+
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo,
+        .hljs-meta {
+            color: #b5cea8;
+        }
+
+        .hljs-number,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-link,
+        .hljs-meta,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo {
+            color: #b5cea8;
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name {
+            color: #d19a66;
+        }
+
+        .hljs-params {
+            color: #d4d4d4;
+        }
+
+        .hljs-attribute,
+        .hljs-attr {
+            color: #9cdcfe;
+        }
+
+        .hljs-function,
+        .hljs-title,
+        .hljs-section,
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #dcdcaa;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1 id="array-utility-functions-documentation">Array Utility Functions Documentation</h1>
-        <p>This npm package provides several utility functions for working with arrays in TypeScript. Below are the
+        <p>This npm package provides several utility functions for working with arrays in JavaScript. Below are the
             details
             of each function along with code examples for usage.</p>
         <h2 id="-filterarray-"><code>filterArray</code></h2>
@@ -94,7 +168,7 @@
         <p>A new array containing only the elements that satisfy the predicate function.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { filterArray } from <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { filterArray } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
                 <span class="hljs-keyword">const</span> filteredArr = filterArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);
@@ -112,7 +186,7 @@
         <p>A new array containing the transformed elements.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { mapArray } from <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { mapArray } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
                 <span class="hljs-keyword">const</span> squaredArr = mapArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> * <span class="hljs-built_in">num</span>);
@@ -130,7 +204,7 @@
         <p>The index of the target element if found, otherwise -1.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { binarySearch } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { binarySearch } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
                 <span class="hljs-keyword">const</span> index = binarySearch(arr, <span class="hljs-number">3</span>);
@@ -147,10 +221,10 @@
         <p>A new array containing the sorted elements.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript">import { quickSort } from 'auxin';
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { quickSort } = require('auxin');
 
-                const arr = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>];
-                const sortedArr = quickSort(arr);
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> sortedArr = quickSort(arr);
                 console.log(sortedArr); <span class="hljs-comment">// Output: [1, 1, 2, 3, 4, 5, 5, 6, 9]</span>
                 </code></pre>
         </div>
@@ -165,7 +239,7 @@
         <p>The modified array with the element appended.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrPush } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrPush } = require('auxin');
 
                 <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
                 arr = arrPush(arr, <span class="hljs-number">4</span>);
@@ -183,7 +257,7 @@
         <p>The modified array with the element prepended.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrUnshift } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrUnshift } = require('auxin');
 
                 <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
                 arr = arrUnshift(arr, <span class="hljs-number">1</span>);
@@ -200,7 +274,7 @@
         <p>The modified array with the last element removed.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrPop } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrPop } = require('auxin');
 
                 <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
                 arr = arrPop(arr);
@@ -217,7 +291,7 @@
         <p>The modified array with the first element removed.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrShift } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrShift } = require('auxin');
 
                 <span class="hljs-keyword">let</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
                 arr = arrShift(arr);
@@ -236,10 +310,10 @@
         <p>A new array containing the sliced elements.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript">import { arrSlice } from 'auxin';
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrSlice } = require('auxin');
 
-                const arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-                const slicedArr = arrSlice(arr, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
+                <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+                <span class="hljs-keyword">const</span> slicedArr = arrSlice(arr, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);
                 console.log(slicedArr); <span class="hljs-comment">// Output: [2, 3]</span>
                 </code></pre>
         </div>
@@ -253,11 +327,11 @@
         <p>A new array with all string elements converted to uppercase.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrToUpperCase } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrToUpperCase } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-string">'hello'</span>, <span class="hljs-string">'world'</span>];
                 <span class="hljs-keyword">const</span> upperCaseArr = arrToUpperCase(arr);
-                <span class="hljs-built_in">console</span>.log(upperCaseArr); <span class="hljs-comment">// Output: ['HELLO', 'WORLD']</span>
+                console.log(upperCaseArr); <span class="hljs-comment">// Output: ['HELLO', 'WORLD']</span>
                 </code></pre>
         </div>
         <h2 id="-arrtolowercase-"><code>arrToLowerCase</code></h2>
@@ -270,18 +344,18 @@
         <p>A new array with all string elements converted to lowercase.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { arrToLowerCase } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { arrToLowerCase } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-string">'HELLO'</span>, <span class="hljs-string">'WORLD'</span>];
                 <span class="hljs-keyword">const</span> lowerCaseArr = arrToLowerCase(arr);
-                <span class="hljs-built_in">console</span>.log(lowerCaseArr); <span class="hljs-comment">// Output: ['hello', 'world']</span>
+                console.log(lowerCaseArr); <span class="hljs-comment">// Output: ['hello', 'world']</span>
                 </code></pre>
         </div>
         <h2 id="-arrayutils-"><code>arrayUtils</code></h2>
         <p>Exports all array utility functions.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> arrayUtils from <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> arrayUtils = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
                 <span class="hljs-keyword">const</span> filteredArr = arrayUtils.filterArray(arr, <span class="hljs-built_in">num</span> =&gt; <span class="hljs-built_in">num</span> % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>);
@@ -298,7 +372,7 @@
         <p>A new array containing the sorted elements in descending order.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { quickSortDescending } from <span class="hljs-string">'auxin'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { quickSortDescending } = require('auxin');
 
                 <span class="hljs-keyword">const</span> arr = [<span class="hljs-number">3</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">9</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>, <span class="hljs-number">5</span>];
                 <span class="hljs-keyword">const</span> sortedArr = quickSortDescending(arr);

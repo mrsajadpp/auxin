@@ -74,6 +74,80 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+
+        /* CSS for VS Code theme */
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #608b4e;
+            font-style: italic;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-subst {
+            color: #569cd6;
+        }
+
+        .hljs-string,
+        .hljs-title,
+        .hljs-section,
+        .hljs-attribute,
+        .hljs-literal,
+        .hljs-template-tag,
+        .hljs-template-variable,
+        .hljs-type,
+        .hljs-addition {
+            color: #d69d85;
+        }
+
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo,
+        .hljs-meta {
+            color: #b5cea8;
+        }
+
+        .hljs-number,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-link,
+        .hljs-meta,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo {
+            color: #b5cea8;
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name {
+            color: #d19a66;
+        }
+
+        .hljs-params {
+            color: #d4d4d4;
+        }
+
+        .hljs-attribute,
+        .hljs-attr {
+            color: #9cdcfe;
+        }
+
+        .hljs-function,
+        .hljs-title,
+        .hljs-section,
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #dcdcaa;
+        }
     </style>
 </head>
 
@@ -93,11 +167,11 @@
         <p>The string with the first character in uppercase.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { capitalize } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello'</span>;
-                <span class="hljs-keyword">const</span> capitalizedStr = capitalize(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(capitalizedStr); <span class="hljs-comment">// Output: 'Hello'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { capitalize } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello'</span>;
+                <span class="hljs-keyword">const</span> capitalizedStr = capitalize(str);
+                console.log(capitalizedStr); <span class="hljs-comment">// Output: 'Hello'</span>
                 </code></pre>
         </div>
         <h2 id="-decapitalize-"><code>decapitalize</code></h2>
@@ -110,11 +184,11 @@
         <p>The string with the first character in lowercase.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { decapitalize } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'Hello'</span>;
-                <span class="hljs-keyword">const</span> decapitalizedStr = decapitalize(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(decapitalizedStr); <span class="hljs-comment">// Output: 'hello'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { decapitalize } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'Hello'</span>;
+                <span class="hljs-keyword">const</span> decapitalizedStr = decapitalize(str);
+                console.log(decapitalizedStr); <span class="hljs-comment">// Output: 'hello'</span>
                 </code></pre>
         </div>
         <h2 id="-tolowercase-"><code>toLowerCase</code></h2>
@@ -127,11 +201,11 @@
         <p>The lowercase version of the string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { toLowerCase } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'HELLO'</span>;
-                <span class="hljs-keyword">const</span> lowerCaseStr = toLowerCase(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(lowerCaseStr); <span class="hljs-comment">// Output: 'hello'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { toLowerCase } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'HELLO'</span>;
+                <span class="hljs-keyword">const</span> lowerCaseStr = toLowerCase(str);
+                console.log(lowerCaseStr); <span class="hljs-comment">// Output: 'hello'</span>
                 </code></pre>
         </div>
         <h2 id="-touppercase-"><code>toUpperCase</code></h2>
@@ -144,11 +218,11 @@
         <p>The uppercase version of the string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { toUpperCase } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello'</span>;
-                <span class="hljs-keyword">const</span> upperCaseStr = toUpperCase(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(upperCaseStr); <span class="hljs-comment">// Output: 'HELLO'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { toUpperCase } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello'</span>;
+                <span class="hljs-keyword">const</span> upperCaseStr = toUpperCase(str);
+                console.log(upperCaseStr); <span class="hljs-comment">// Output: 'HELLO'</span>
                 </code></pre>
         </div>
         <h2 id="-trim-"><code>trim</code></h2>
@@ -161,11 +235,11 @@
         <p>The string with leading and trailing whitespace removed.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { <span class="hljs-built_in">trim</span> } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'   hello   '</span>;
-                <span class="hljs-keyword">const</span> trimmedStr = <span class="hljs-built_in">trim</span>(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(trimmedStr); <span class="hljs-comment">// Output: 'hello'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { trim } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'   hello   '</span>;
+                <span class="hljs-keyword">const</span> trimmedStr = trim(str);
+                console.log(trimmedStr); <span class="hljs-comment">// Output: 'hello'</span>
                 </code></pre>
         </div>
         <h2 id="-startswith-"><code>startsWith</code></h2>
@@ -179,13 +253,13 @@
         <p>True if the string starts with the prefix, false otherwise.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { startsWith } from <span class="hljs-string">'auxin'</span>;
-        
-            <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello'</span>;
-            <span class="hljs-keyword">const</span> prefix = <span class="hljs-string">'he'</span>;
-            <span class="hljs-keyword">const</span> startsWithPrefix = startsWith(<span class="hljs-built_in">str</span>, prefix);
-            console.<span class="hljs-built_in">log</span>(startsWithPrefix); <span class="hljs-comment">// Output: true</span>
-            </code></pre>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { startsWith } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello'</span>;
+                <span class="hljs-keyword">const</span> prefix = <span class="hljs-string">'he'</span>;
+                <span class="hljs-keyword">const</span> startsWithPrefix = startsWith(str, prefix);
+                console.log(startsWithPrefix); <span class="hljs-comment">// Output: true</span>
+                </code></pre>
         </div>
         <h2 id="-endswith-"><code>endsWith</code></h2>
         <p>Checks if a string ends with the specified suffix.</p>
@@ -198,12 +272,12 @@
         <p>True if the string ends with the suffix, false otherwise.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { endsWith } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { endsWith } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello'</span>;
                 <span class="hljs-keyword">const</span> suffix = <span class="hljs-string">'lo'</span>;
-                <span class="hljs-keyword">const</span> endsWithSuffix = endsWith(<span class="hljs-built_in">str</span>, suffix);
-                console.<span class="hljs-built_in">log</span>(endsWithSuffix); <span class="hljs-comment">// Output: true</span>
+                <span class="hljs-keyword">const</span> endsWithSuffix = endsWith(str, suffix);
+                console.log(endsWithSuffix); <span class="hljs-comment">// Output: true</span>
                 </code></pre>
         </div>
         <h2 id="-reversestr-"><code>reverseStr</code></h2>
@@ -216,11 +290,11 @@
         <p>The reversed string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { reverseStr } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello'</span>;
-                <span class="hljs-keyword">const</span> reversedStr = reverseStr(<span class="hljs-built_in">str</span>);
-                console.<span class="hljs-built_in">log</span>(reversedStr); <span class="hljs-comment">// Output: 'olleh'</span>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { reverseStr } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello'</span>;
+                <span class="hljs-keyword">const</span> reversedStr = reverseStr(str);
+                console.log(reversedStr); <span class="hljs-comment">// Output: 'olleh'</span>
                 </code></pre>
         </div>
         <h2 id="-countoccurrences-"><code>countOccurrences</code></h2>
@@ -234,12 +308,12 @@
         <p>The number of occurrences of the substring in the string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { countOccurrences } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">str</span> = <span class="hljs-string">'hello world hello'</span>;
+            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { countOccurrences } from <span class="hljs-string">'stringUtils'</span>;
+
+                <span class="hljs-keyword">const</span> str = <span class="hljs-string">'hello world hello'</span>;
                 <span class="hljs-keyword">const</span> subStr = <span class="hljs-string">'hello'</span>;
-                <span class="hljs-keyword">const</span> occurrences = countOccurrences(<span class="hljs-built_in">str</span>, subStr);
-                console.<span class="hljs-built_in">log</span>(occurrences); <span class="hljs-comment">// Output: 2</span>
+                <span class="hljs-keyword">const</span> occurrences = countOccurrences(str, subStr);
+                console.log(occurrences); <span class="hljs-comment">// Output: 2</span>
                 </code></pre>
         </div>
         <div class="footer">

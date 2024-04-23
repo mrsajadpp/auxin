@@ -18,7 +18,7 @@ A new array containing only the elements that satisfy the predicate function.
 ### Example
 
 ```typescript
-import { filterArray } from 'auxin';
+const { filterArray } = require('auxin');
 
 const arr = [1, 2, 3, 4, 5];
 const filteredArr = filterArray(arr, num => num % 2 === 0);
@@ -41,7 +41,7 @@ A new array containing the transformed elements.
 ### Example
 
 ```typescript
-import { mapArray } from 'auxin';
+const { mapArray } = require('auxin');
 
 const arr = [1, 2, 3, 4, 5];
 const squaredArr = mapArray(arr, num => num * num);
@@ -64,7 +64,7 @@ The index of the target element if found, otherwise -1.
 ### Example
 
 ```typescript
-import { binarySearch } from 'auxin';
+const { binarySearch } = require('auxin');
 
 const arr = [1, 2, 3, 4, 5];
 const index = binarySearch(arr, 3);
@@ -86,7 +86,7 @@ A new array containing the sorted elements.
 ### Example
 
 ```typescript
-import { quickSort } from 'auxin';
+const { quickSort } = require('auxin');
 
 const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
 const sortedArr = quickSort(arr);
@@ -109,7 +109,7 @@ The modified array with the element appended.
 ### Example
 
 ```typescript
-import { arrPush } from 'auxin';
+const { arrPush } = require('auxin');
 
 let arr = [1, 2, 3];
 arr = arrPush(arr, 4);
@@ -132,7 +132,7 @@ The modified array with the element prepended.
 ### Example
 
 ```typescript
-import { arrUnshift } from 'auxin';
+const { arrUnshift } = require('auxin');
 
 let arr = [2, 3, 4];
 arr = arrUnshift(arr, 1);
@@ -154,7 +154,7 @@ The modified array with the last element removed.
 ### Example
 
 ```typescript
-import { arrPop } from 'auxin';
+const { arrPop } = require('auxin');
 
 let arr = [1, 2, 3];
 arr = arrPop(arr);
@@ -176,7 +176,7 @@ The modified array with the first element removed.
 ### Example
 
 ```typescript
-import { arrShift } from 'auxin';
+const { arrShift } = require('auxin');
 
 let arr = [1, 2, 3];
 arr = arrShift(arr);
@@ -200,7 +200,7 @@ A new array containing the sliced elements.
 ### Example
 
 ```typescript
-import { arrSlice } from 'auxin';
+const { arrSlice } = require('auxin');
 
 const arr = [1, 2, 3, 4, 5];
 const slicedArr = arrSlice(arr, 1, 3);
@@ -222,7 +222,7 @@ A new array with all string elements converted to uppercase.
 ### Example
 
 ```typescript
-import { arrToUpperCase } from 'auxin';
+const { arrToUpperCase } = require('auxin');
 
 const arr = ['hello', 'world'];
 const upperCaseArr = arrToUpperCase(arr);
@@ -244,7 +244,7 @@ A new array with all string elements converted to lowercase.
 ### Example
 
 ```typescript
-import { arrToLowerCase } from 'auxin';
+const { arrToLowerCase } = require('auxin');
 
 const arr = ['HELLO', 'WORLD'];
 const lowerCaseArr = arrToLowerCase(arr);
@@ -258,7 +258,7 @@ Exports all array utility functions.
 ### Example
 
 ```typescript
-import * as arrayUtils from 'auxin';
+const arrayUtils = require('auxin');
 
 const arr = [1, 2, 3, 4, 5];
 const filteredArr = arrayUtils.filterArray(arr, num => num % 2 === 0);
@@ -280,7 +280,7 @@ A new array containing the sorted elements in descending order.
 ### Example
 
 ```typescript
-import { quickSortDescending } from 'auxin';
+const { quickSortDescending } = require('auxin');
 
 const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
 const sortedArr = quickSortDescending(arr);

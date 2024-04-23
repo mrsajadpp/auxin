@@ -1,10 +1,10 @@
 # String Utility Functions Documentation
 
-This npm package provides several utility functions for working with strings in TypeScript. Below are the details of each function along with code examples for usage.
+This npm package offers various utility functions for manipulating strings in TypeScript. Below, you'll find detailed descriptions of each function along with code examples demonstrating their usage.
 
 ## `capitalize`
 
-Converts the first character of a string to uppercase.
+This function converts the first character of a string to uppercase.
 
 ### Parameters
 
@@ -17,16 +17,16 @@ The string with the first character in uppercase.
 ### Example
 
 ```typescript
-import { capitalize } from 'auxin';
+const { capitalize } = require('stringUtils');
 
-const str = 'hello';
+const str = 'hello world';
 const capitalizedStr = capitalize(str);
-console.log(capitalizedStr); // Output: 'Hello'
+console.log(capitalizedStr); // Output: 'Hello world'
 ```
 
 ## `decapitalize`
 
-Converts the first character of a string to lowercase.
+This function converts the first character of a string to lowercase.
 
 ### Parameters
 
@@ -39,16 +39,16 @@ The string with the first character in lowercase.
 ### Example
 
 ```typescript
-import { decapitalize } from 'auxin';
+const { decapitalize } = require('stringUtils');
 
-const str = 'Hello';
+const str = 'Hello World';
 const decapitalizedStr = decapitalize(str);
-console.log(decapitalizedStr); // Output: 'hello'
+console.log(decapitalizedStr); // Output: 'hello World'
 ```
 
 ## `toLowerCase`
 
-Converts a string to lowercase.
+This function converts all characters in a string to lowercase.
 
 ### Parameters
 
@@ -56,21 +56,21 @@ Converts a string to lowercase.
 
 ### Returns
 
-The lowercase version of the string.
+The string with all characters in lowercase.
 
 ### Example
 
 ```typescript
-import { toLowerCase } from 'auxin';
+const { toLowerCase } = require('stringUtils');
 
-const str = 'HELLO';
+const str = 'Hello World';
 const lowerCaseStr = toLowerCase(str);
-console.log(lowerCaseStr); // Output: 'hello'
+console.log(lowerCaseStr); // Output: 'hello world'
 ```
 
 ## `toUpperCase`
 
-Converts a string to uppercase.
+This function converts all characters in a string to uppercase.
 
 ### Parameters
 
@@ -78,21 +78,21 @@ Converts a string to uppercase.
 
 ### Returns
 
-The uppercase version of the string.
+The string with all characters in uppercase.
 
 ### Example
 
 ```typescript
-import { toUpperCase } from 'auxin';
+const { toUpperCase } = require('stringUtils');
 
-const str = 'hello';
+const str = 'hello world';
 const upperCaseStr = toUpperCase(str);
-console.log(upperCaseStr); // Output: 'HELLO'
+console.log(upperCaseStr); // Output: 'HELLO WORLD'
 ```
 
 ## `trim`
 
-Removes leading and trailing whitespace from a string.
+This function removes leading and trailing whitespace from a string.
 
 ### Parameters
 
@@ -105,16 +105,16 @@ The string with leading and trailing whitespace removed.
 ### Example
 
 ```typescript
-import { trim } from 'auxin';
+const { trim } = require('stringUtils');
 
-const str = '   hello   ';
+const str = '   hello world   ';
 const trimmedStr = trim(str);
-console.log(trimmedStr); // Output: 'hello'
+console.log(trimmedStr); // Output: 'hello world'
 ```
 
 ## `startsWith`
 
-Checks if a string starts with the specified prefix.
+This function checks if a string starts with the specified prefix.
 
 ### Parameters
 
@@ -128,17 +128,17 @@ True if the string starts with the prefix, false otherwise.
 ### Example
 
 ```typescript
-import { startsWith } from 'auxin';
+const { startsWith } = require('stringUtils');
 
-const str = 'hello';
-const prefix = 'he';
+const str = 'hello world';
+const prefix = 'hello';
 const startsWithPrefix = startsWith(str, prefix);
 console.log(startsWithPrefix); // Output: true
 ```
 
 ## `endsWith`
 
-Checks if a string ends with the specified suffix.
+This function checks if a string ends with the specified suffix.
 
 ### Parameters
 
@@ -152,17 +152,17 @@ True if the string ends with the suffix, false otherwise.
 ### Example
 
 ```typescript
-import { endsWith } from 'auxin';
+const { endsWith } = require('stringUtils');
 
-const str = 'hello';
-const suffix = 'lo';
+const str = 'hello world';
+const suffix = 'world';
 const endsWithSuffix = endsWith(str, suffix);
 console.log(endsWithSuffix); // Output: true
 ```
 
 ## `reverseStr`
 
-Reverses a string.
+This function reverses a string.
 
 ### Parameters
 
@@ -175,16 +175,16 @@ The reversed string.
 ### Example
 
 ```typescript
-import { reverseStr } from 'auxin';
+const { reverseStr } = require('stringUtils');
 
-const str = 'hello';
+const str = 'hello world';
 const reversedStr = reverseStr(str);
-console.log(reversedStr); // Output: 'olleh'
+console.log(reversedStr); // Output: 'dlrow olleh'
 ```
 
 ## `countOccurrences`
 
-Counts the occurrences of a substring within a string.
+This function counts the occurrences of a substring within a string.
 
 ### Parameters
 
@@ -198,12 +198,12 @@ The number of occurrences of the substring in the string.
 ### Example
 
 ```typescript
-import { countOccurrences } from 'auxin';
+const { countOccurrences } = require('stringUtils');
 
-const str = 'hello world hello';
+const str = 'hello world hello hello';
 const subStr = 'hello';
 const occurrences = countOccurrences(str, subStr);
-console.log(occurrences); // Output: 2
+console.log(occurrences); // Output: 3
 ```
 
 <div align="center">

@@ -74,6 +74,80 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
+
+        /* CSS for VS Code theme */
+        .hljs {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #1e1e1e;
+            color: #d4d4d4;
+        }
+
+        .hljs-comment,
+        .hljs-quote {
+            color: #608b4e;
+            font-style: italic;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag,
+        .hljs-subst {
+            color: #569cd6;
+        }
+
+        .hljs-string,
+        .hljs-title,
+        .hljs-section,
+        .hljs-attribute,
+        .hljs-literal,
+        .hljs-template-tag,
+        .hljs-template-variable,
+        .hljs-type,
+        .hljs-addition {
+            color: #d69d85;
+        }
+
+        .hljs-name,
+        .hljs-selector-id,
+        .hljs-selector-class,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo,
+        .hljs-meta {
+            color: #b5cea8;
+        }
+
+        .hljs-number,
+        .hljs-symbol,
+        .hljs-bullet,
+        .hljs-link,
+        .hljs-meta,
+        .hljs-selector-attr,
+        .hljs-selector-pseudo {
+            color: #b5cea8;
+        }
+
+        .hljs-built_in,
+        .hljs-builtin-name {
+            color: #d19a66;
+        }
+
+        .hljs-params {
+            color: #d4d4d4;
+        }
+
+        .hljs-attribute,
+        .hljs-attr {
+            color: #9cdcfe;
+        }
+
+        .hljs-function,
+        .hljs-title,
+        .hljs-section,
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #dcdcaa;
+        }
     </style>
 </head>
 
@@ -81,44 +155,44 @@
 
     <div class="container">
         <h1 id="date-utility-functions-documentation">Date Utility Functions Documentation</h1>
-        <p>This npm package provides several utility functions for working with dates in TypeScript. Below are the
-            details of each function along with code examples for usage.</p>
+        <p>This npm package offers various utility functions for managing dates in TypeScript. Below, you'll find
+            detailed descriptions of each function along with code examples demonstrating their usage.</p>
         <h2 id="-formatdate-"><code>formatDate</code></h2>
-        <p>Formats a date object as a string in the specified format.</p>
+        <p>Formats a date object into a string based on the provided format.</p>
         <h3 id="parameters">Parameters</h3>
         <ul>
             <li><code>date</code>: The date object to format.</li>
-            <li><code>format</code>: The format string (e.g., &#39;YYYY-MM-DD HH:mm:ss&#39;).</li>
+            <li><code>format</code>: The format string (e.g., 'YYYY-MM-DD HH:mm:ss').</li>
         </ul>
         <h3 id="returns">Returns</h3>
         <p>The formatted date string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { formatDate } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
-                <span class="hljs-keyword">const</span> formattedDate = formatDate(date, <span class="hljs-string">'YYYY-MM-DD HH:mm:ss'</span>);
-                <span class="hljs-built_in">console</span>.log(formattedDate); <span class="hljs-comment">// Output: '2024-04-21 12:30:45'</span>
-                </code></pre>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { formatDate } = require(<span class="hljs-string">'auxin'</span>);
+
+<span class="hljs-keyword">const</span> date = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+<span class="hljs-keyword">const</span> formattedDate = formatDate(date, <span class="hljs-string">'YYYY-MM-DD HH:mm:ss'</span>);
+console.log(formattedDate); <span class="hljs-comment">// Output: '2024-04-21 12:30:45'</span>
+</code></pre>
         </div>
         <h2 id="-getcurrentdatetime-"><code>getCurrentDateTime</code></h2>
-        <p>Gets the current date and time formatted as a string in the specified format.</p>
+        <p>Gets the current date and time formatted as a string according to the specified format.</p>
         <h3 id="parameters">Parameters</h3>
         <ul>
-            <li><code>format</code>: The format string (e.g., &#39;YYYY-MM-DD HH:mm:ss&#39;).</li>
+            <li><code>format</code>: The format string (e.g., 'YYYY-MM-DD HH:mm:ss').</li>
         </ul>
         <h3 id="returns">Returns</h3>
         <p>The formatted current date and time string.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { getCurrentDateTime } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> formattedDateTime = getCurrentDateTime(<span class="hljs-string">'YYYY-MM-DD HH:mm:ss'</span>);
-                <span class="hljs-built_in">console</span>.log(formattedDateTime); <span class="hljs-comment">// Output: '2024-04-21 12:30:45'</span>
-                </code></pre>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { getCurrentDateTime } = require(<span class="hljs-string">'auxin'</span>);
+
+<span class="hljs-keyword">const</span> formattedDateTime = getCurrentDateTime(<span class="hljs-string">'YYYY-MM-DD HH:mm:ss'</span>);
+console.log(formattedDateTime); <span class="hljs-comment">// Output: '2024-04-21 12:30:45'</span>
+</code></pre>
         </div>
         <h2 id="-parsedate-"><code>parseDate</code></h2>
-        <p>Parses a date string into a Date object.</p>
+        <p>Parses a date string and returns a Date object.</p>
         <h3 id="parameters">Parameters</h3>
         <ul>
             <li><code>dateString</code>: The date string to parse.</li>
@@ -127,12 +201,12 @@
         <p>The parsed Date object, or null if parsing fails.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { parseDate } <span class="hljs-keyword">from</span> <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> dateString = <span class="hljs-string">'2024-04-21'</span>;
-                <span class="hljs-keyword">const</span> parsedDate = parseDate(dateString);
-                <span class="hljs-built_in">console</span>.log(parsedDate); <span class="hljs-comment">// Output: Date object for '2024-04-21'</span>
-                </code></pre>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { parseDate } = require(<span class="hljs-string">'auxin'</span>);
+
+<span class="hljs-keyword">const</span> dateString = <span class="hljs-string">'2024-04-21'</span>;
+<span class="hljs-keyword">const</span> parsedDate = parseDate(dateString);
+console.log(parsedDate); <span class="hljs-comment">// Output: Date object for '2024-04-21'</span>
+</code></pre>
         </div>
         <h2 id="-isleapyear-"><code>isLeapYear</code></h2>
         <p>Checks if a given year is a leap year.</p>
@@ -144,12 +218,14 @@
         <p>True if the year is a leap year, false otherwise.</p>
         <h3 id="example">Example</h3>
         <div class="example">
-            <pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { isLeapYear } from <span class="hljs-string">'auxin'</span>;
-        
-                <span class="hljs-keyword">const</span> <span class="hljs-built_in">year</span> = <span class="hljs-number">2024</span>;
-                <span class="hljs-keyword">const</span> isLeap = isLeapYear(<span class="hljs-built_in">year</span>);
-                console.<span class="hljs-built_in">log</span>(isLeap); <span class="hljs-comment">// Output: true</span>
-                </code></pre>
+            <pre><code class="lang-typescript"><span class="hljs-keyword">const</span> { isLeapYear } = require(<span class="hljs-string">'auxin'</span>);
+
+<span class="hljs-keyword">const</span> <span class="hljs-built_in">year</span> = <span class="hljs-number">2024</span>;
+<span class="hljs-keyword">const</span> isLeap = isLeapYear(<span class="hljs-built
+
+_in">year</span>);
+console.<span class="hljs-built_in">log</span>(isLeap); <span class="hljs-comment">// Output: true</span>
+</code></pre>
         </div>
         <div class="footer">
             <p>Made with ❤️ by Sajad Collaborated with Grovix Lab</p>
