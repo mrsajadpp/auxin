@@ -265,6 +265,28 @@ const filteredArr = arrayUtils.filterArray(arr, num => num % 2 === 0);
 console.log(filteredArr); // Output: [2, 4]
 ```
 
+## `quickSortDescending`
+
+Sorts an array in descending order using the Quick Sort algorithm.
+
+### Parameters
+
+- `arr`: The array to sort.
+
+### Returns
+
+A new array containing the sorted elements in descending order.
+
+### Example
+
+```typescript
+import { quickSortDescending } from 'auxin';
+
+const arr = [3, 1, 4, 1, 5, 9, 2, 6, 5];
+const sortedArr = quickSortDescending(arr);
+console.log(sortedArr); // Output: [9, 6, 5, 5, 4, 3, 2, 1, 1]
+```
+
 <div align="center">
 
 ---
